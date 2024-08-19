@@ -24,13 +24,13 @@ setwd(dirname(current_path))
 source(paste(dirname(current_path), "/data_functions.R", sep = ""))
 
 # company data incl. geographical information
-data_comp <- read.csv("../data-source-files/MFICompanyMetaData.csv", sep=";", na.strings = c("", "NA"))
+data_comp <- read.xlsx("../data-source-files/mix-market-mfi-company-metadata.xlsx", na.strings = c("", "NA"))
 
 clean_data_final_balanced <- openxlsx::read.xlsx(paste0("../data-files/data_finsoc_balanced_clean_social_financial_plausible.xlsx"))
 clean_data_final_unbalanced <- openxlsx::read.xlsx(paste0("../data-files/data_finsoc_unbalanced_clean_social_financial_plausible.xlsx"))
 
 ## -----
-## Figure 1: World Map
+## Figure 2: World Map
 ## -----
 ## prepare balanced data
 MFI.final <- data.frame("MFI.ID" = unique(clean_data_final_balanced$MFI.ID))
@@ -183,7 +183,6 @@ my_summary <- function(v){
   return(res)
 }
 
-pan_vers <- "balanced"
 for(pan_vers in c("balanced", "unbalanced")) {
   clean_data <- openxlsx::read.xlsx(paste0("../data-files/data_finsoc_", pan_vers, "_clean_social_financial_plausible.xlsx"))
   overall_missingess <- sum(is.na(clean_data)) / (nrow(clean_data) * ncol(clean_data)); print(paste0("Amount of overall missingness: ", overall_missingess))

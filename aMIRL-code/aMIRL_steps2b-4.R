@@ -472,8 +472,8 @@ objects_to_save <- objects_to_save[-which(startsWith(objects_to_save, "x_"))]
 objects_to_save <- objects_to_save[-which(startsWith(objects_to_save, "y_"))]
 objects_to_save <- objects_to_save[-which(objects_to_save %in% c("current_path", "objects_to_save", "target_variables"))]
 
-load(paste0("../aMIRL-output/results_balanced_aMIRL_OSS.RData"))
-# save(list = objects_to_save, file = paste0("../aMIRL-output/results_", model_variant, ".RData"))
+# load(paste0("../aMIRL-output/results_balanced_aMIRL_OSS.RData"))
+save(list = objects_to_save, file = paste0("../aMIRL-output/results_", model_variant, ".RData"))
 # load(paste0("../aMIRL-output/results_", model_variant, ".RData"))
 
 print(paste0("End of computations for ", model_variant, ": ", Sys.time()))

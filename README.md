@@ -3,6 +3,7 @@
 by Lotta Rüter and Melanie Schienle.
 
 ## Notes
++ The contents of this repository are under a Creative Commons Attribution-NonCommercial 4.0 International Public License
 + All computations were performed with R version 4.4.0 (2024-04-24)
 + Required packages: `bcaboot`, `corrplot`, `countrycode`, `doParallel`, `dplyr`, `glmnet`, `kableExtra`, `mice`, `openxlsx`, `quantreg`, `RColorBrewer`, `readxl`, `REEMtree`, `rlist`, `rqpd`, `rstudioapi`, `rworldmap`, `stringr`
 
